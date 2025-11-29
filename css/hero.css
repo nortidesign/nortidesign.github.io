@@ -1,0 +1,17 @@
+.hero {
+  background: var(--color-background-cards);
+  color: var(--color-text-primary);
+  padding: 100px 0;
+  text-align: center;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  color: var(--color-text-primary);
+}
+
+.hero p {
+  font-size: 1.2rem;
+  color: var(--color-text-secondary);
+}

@@ -1,0 +1,20 @@
+.portfolio-container {
+  text-align: center;
+}
+
+.portfolio-grid {
+  margin-top: var(--spacing-xl);
+  display: grid;
+  gap: var(--spacing-lg);
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.placeholder-thumb {
+  background: var(--color-background-tertiary);
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--color-text-secondary);
+  font-weight: var(--font-weight-medium);
+}

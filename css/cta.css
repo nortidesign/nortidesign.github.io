@@ -1,0 +1,17 @@
+.cta-container {
+  text-align: center;
+}
+
+.cta-button {
+  background: var(--color-button-primary);
+  color: var(--color-button-text);
+  padding: var(--spacing-md) var(--spacing-xl);
+  border-radius: var(--spacing-sm);
+  margin-top: var(--spacing-lg);
+  display: inline-block;
+  font-size: var(--font-size-lg);
+}
+
+.cta-button:hover {
+  background: var(--color-button-hover);
+}
