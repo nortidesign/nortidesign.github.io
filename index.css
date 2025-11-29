@@ -41,6 +41,8 @@
   --color-text-error: #F24A46;
   --color-text-button-primary: #FFFFFF;
   --color-text-button-secondary: #265fff;
+  --color-text-button-theme: #485260;
+  --color-text-button-theme-hover: #FFFFFF;
   --color-text-button-delete: #F24A46;
 
   /* Contornos */
@@ -68,23 +70,8 @@
   --color-background-button-secondary-hover: #ebeffc;
   --color-background-button-tertiary-default: transparent;
   --color-background-button-tertiary-hover: #F1F3F6;
-  --color-background-button-quaternary: #F2F2F2;
-  --color-background-button-quaternary-hover: #E9ECF5;
-  --color-background-button-remove-default: transparent;
-  --color-background-button-remove-hover: #fce9e9;
-  --color-background-button-add-default: #E9ECF5;
-  --color-background-button-add-hover: #F0F3FB;
-  --color-background-button-switcher-off: #D7DCEB;
-  --color-background-button-switcher-off-handle: #39496D;
-  --color-background-button-switcher-on: #265FFF;
-  --color-background-button-switcher-on-handle: #FAFAFA;
-  --color-background-button-disable: #F0F3FB;
-
-  /* Botões da Barra de Ferramentas */
-  --color-button-toolbar-background: #CFDBF0;
-  --color-button-toolbar-hover: #7499FF;
-  --color-button-toolbar-active: #265FFF;
-  --color-button-toolbar-icon: #1E316F;
+  --color-background-button-theme: transparent;
+  --color-background-button-theme-hover: #1D2853;
 
   /* Cor dos ícones */
   --color-icon-primary: #FFF;
@@ -140,6 +127,8 @@
   --color-text-error: #F24A46;
   --color-text-button-primary: #FFFFFF;
   --color-text-button-secondary: #fafafa;
+  --color-text-button-theme: #fff;
+  --color-text-button-theme-hover: #485260;
   --color-text-button-delete: #FFFFFF;
 
   /* Contornos */
@@ -167,23 +156,9 @@
   --color-background-button-secondary-hover: #223D8B;
   --color-background-button-tertiary-default: transparent;
   --color-background-button-tertiary-hover: #1D2853;
-  --color-background-button-quaternary: #1E316F;
-  --color-background-button-quaternary-hover: #265fff;
-  --color-background-button-remove-default: transparent;
-  --color-background-button-remove-hover: rgba(242, 73, 70, 0.7);
-  --color-background-button-add-default: #223D8BB3;
-  --color-background-button-add-hover: #223D8B;
-  --color-background-button-switcher-off: #D7DCEB;
-  --color-background-button-switcher-off-handle: #39496D;
-  --color-background-button-switcher-on: #265FFF;
-  --color-background-button-switcher-on-handle: #FAFAFA;
-  --color-background-button-disable: #172258;
+  --color-background-button-theme: transparent;
+  --color-background-button-theme-hover: #F1F3F6;
 
-  /* Botões da Barra de Ferramentas */
-  --color-button-toolbar-background: #1E316F;
-  --color-button-toolbar-hover: #2660ffa6;
-  --color-button-toolbar-active: #265FFF;
-  --color-button-toolbar-icon: #fafafa;
 
   /* Cor dos ícones */
   --color-icon-primary: #FFF;
@@ -200,6 +175,7 @@
   --font-weight-medium: 600;
   --font-weight-bold: 700;
 }
+
 /* RESET */
 * {
   margin: 0;
@@ -209,13 +185,21 @@
 
 body {
   font-family: 'Anek Latin', sans-serif;
-  background: var(--color-background-primary);
+  background: var(--color-background-secondary);
   color: var(--color-text-primary);
   line-height: 1.6;
   transition: background 0.3s ease, color 0.3s ease;
+  padding-top: 80px;
+  height: 100vh;
+  width: 100vw;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-weight: 700;
   color: var(--color-text-primary);
 }
