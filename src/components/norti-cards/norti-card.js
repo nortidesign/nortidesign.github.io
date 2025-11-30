@@ -14,5 +14,10 @@ nortiCardsData.forEach(card => {
     </div>
   `;
 
+  // Adiciona onclick para cada card
+  cardEl.addEventListener("click", () => {
+    window.location.href = card.link;
+  });
+
   container.appendChild(cardEl);
 });
