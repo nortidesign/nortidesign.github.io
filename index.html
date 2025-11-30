@@ -10,7 +10,7 @@
 
     <link rel="stylesheet" href="src/icons/nortiIcons.css">
 
-    <link rel="stylesheet" href="src/components/norti-cards/norti-cardDefault.css">
+    <link rel="stylesheet" href="src/components/norti-cards/norti-card.css">
     <link rel="stylesheet" href="src/components/norti-header/norti-header.css">
 
     <link rel="stylesheet" href="index.css">
@@ -31,28 +31,17 @@
         <section class="norti-hero">
             <div class="norti-noise"></div>
             <div class="norti-light-green"></div>
-            <div class="container">
-                <h1>Bem-vindo à Norti Design</h1>
-                <p>Seu site moderno com tema claro/escuro e CSS modular.</p>
-            </div>
+            <section>
+                <div class="norti-heroContent">
+                    <h1>Design estratégico para <br> marcas ambiciosas.</br></h1>
+                    <p>Construímos identidades e interfaces para empresas que buscam destaque.</p>
+                </div>
+            </section>
             <div class="norti-hero-fade"></div>
         </section>
 
-        <!-- EXEMPLOS DE COMPONENTES -->
-        <norti-card title="Design Profissional" icon="sun">
-            <span>Eu crio identidades visuais modernas e minimalistas.</span>
-        </norti-card>
+        <div class="norti-cards-container"></div>
 
-        <norti-card title="UI/UX">
-            Interfaces intuitivas e fluxos bem construídos.
-        </norti-card>
-
-        <section class="services">
-            <div class="container">
-                <h2>Nossos Serviços</h2>
-                <p>Espaço reservado para começar a popular seu site.</p>
-            </div>
-        </section>
     </main>
 
 
@@ -64,7 +53,7 @@
     </footer>
 
     <script type="module" src="src/icons/nortiIcons.js"></script>
-    <script type="module" src="src/components/norti-cards/norti-cardDefault.js"></script>
+    <script type="module" src="src/components/norti-cards/norti-card.js"></script>
     <script type="module" src="src/components/norti-header/norti-header.js"></script>
 
 </body>

@@ -35,7 +35,7 @@
 
   /* Contornos */
   --color-outline-primary: 1px solid #fafafa;
-  --color-outline-secondary: 1px solid #D7DCEB;
+  --color-outline-secondary: 1px solid #d2d3d6;
   --color-outline-secondary-variable: #D7DCEB;
   --color-outline-tertiary: 1px solid #B7BCCB;
   --color-outline-tertiary-variable: #B7BCCB;
@@ -172,11 +172,15 @@ a:hover {
 
 /* Containers e seções */
 section {
-  padding: 60px 0;
+    display: flex;
+    padding: 60px 0;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
 .container {
-  max-width: 1200px;
-  margin: auto;
+  max-width: 1440px;
+  margin: 16vh 26vw;
   padding: 0 20px;
 }
