@@ -4,5 +4,11 @@
 }
 
 norti-icons {
-  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+norti-icons svg {
+  display: block;
 }

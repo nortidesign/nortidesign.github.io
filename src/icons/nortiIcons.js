@@ -39,7 +39,7 @@ class NortIcons extends HTMLElement {
         height="${size}" 
         viewBox="0 0 25 25" 
         xmlns="http://www.w3.org/2000/svg"
-        class="nort-icon"
+        class="norti-icon"
         fill="${color}"
       >
         ${processedPaths.join("\n")}

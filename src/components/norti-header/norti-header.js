@@ -3,15 +3,19 @@ class NortiHeader extends HTMLElement {
     const logo = this.getAttribute("logo") || "Minha Logo";
     const fixed = this.getAttribute("fixed") === "true";
     const whatsappLink = this.getAttribute("whatsapp") || "https://wa.me/5551997142383";
-    const darkSymbol = "img/dark-symbol-norti-design.png"; 
-    const lightSymbol = "img/light-symbol-norti-design.png";
+
+    // Caminhos absolutos para imagens na pasta img/ da raiz
+    const darkLogo = "/img/dark-logo-norti-design.png";
+    const lightLogo = "/img/light-logo-norti-design.png";
+    const darkSymbol = "/img/dark-symbol-norti-design.png"; 
+    const lightSymbol = "/img/light-symbol-norti-design.png";
 
     this.innerHTML = `
       <header class="nortiHeader ${fixed ? "fixed" : ""}">
         <div class="nortiHeaderContainer">
 
           <a href="/" class="logo">
-            <img src="img/light-logo-norti-design.png" alt="${logo}" id="logo-full">
+            <img src="${lightLogo}" alt="${logo}" id="logo-full">
             <img src="${lightSymbol}" alt="${logo} - Símbolo" id="logo-symbol">
           </a>
 
@@ -21,7 +25,7 @@ class NortiHeader extends HTMLElement {
             </a>
 
             <button id="theme-toggle" class="theme-btn" aria-label="Trocar tema">
-              <norti-icons name="sun" size="20"></norti-icons>
+              <norti-icons name="moon" size="20"></norti-icons>
             </button>
           </div>
           
@@ -33,8 +37,6 @@ class NortiHeader extends HTMLElement {
     this.setupThemeToggle();
   }
 
-  // O método setupMobileMenu() foi removido daqui e a chamada também.
-
   applySavedTheme() {
     const savedTheme = localStorage.getItem("theme") || "dark";
     document.documentElement.setAttribute("data-theme", savedTheme);
@@ -44,14 +46,14 @@ class NortiHeader extends HTMLElement {
     const icon = this.querySelector("#theme-toggle norti-icons");
 
     if (logoFull) logoFull.src = savedTheme === "light"
-      ? "img/light-logo-norti-design.png"
-      : "img/dark-logo-norti-design.png";
+      ? "/img/light-logo-norti-design.png"
+      : "/img/dark-logo-norti-design.png";
 
     if (logoSymbol) logoSymbol.src = savedTheme === "light"
-      ? "img/light-symbol-norti-design.png"
-      : "img/dark-symbol-norti-design.png";
+      ? "/img/light-symbol-norti-design.png"
+      : "/img/dark-symbol-norti-design.png";
 
-    if (icon) icon.setAttribute("name", savedTheme === "light" ? "sun" : "moon");
+    if (icon) icon.setAttribute("name", savedTheme === "light" ? "moon" : "sun");
   }
 
   setupThemeToggle() {
@@ -69,14 +71,14 @@ class NortiHeader extends HTMLElement {
       document.documentElement.setAttribute("data-theme", newTheme);
 
       logoFull.src = newTheme === "light"
-        ? "img/light-logo-norti-design.png"
-        : "img/dark-logo-norti-design.png";
+        ? "/img/light-logo-norti-design.png"
+        : "/img/dark-logo-norti-design.png";
       
       logoSymbol.src = newTheme === "light"
-        ? "img/light-symbol-norti-design.png"
-        : "img/dark-symbol-norti-design.png";
+        ? "/img/light-symbol-norti-design.png"
+        : "/img/dark-symbol-norti-design.png";
 
-      icon.setAttribute("name", newTheme === "light" ? "sun" : "moon");
+      icon.setAttribute("name", newTheme === "light" ? "moon" : "sun");
 
       localStorage.setItem("theme", newTheme);
     });

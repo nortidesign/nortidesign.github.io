@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto Dinâmico</title>
+
+    <link rel="icon" type="image/x-icon" href="img/favicon.ico">
+
+    <!-- Estilos dos componentes Norti -->
+    <link rel="stylesheet" href="../icons/nortiIcons.css">
+    <link rel="stylesheet" href="../components/norti-header/norti-header.css">
+    <link rel="stylesheet" href="../components/norti-footer/norti-footer.css">
+
+    <link rel="stylesheet" href="/index.css">
+    <link rel="stylesheet" href="/style.css">
+
+    <!-- Estilo próprio do projeto -->
+    <link rel="stylesheet" href="project.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Anek+Latin:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- HEADER COMPONENTIZADO -->
+    <norti-header logo="Norti Design" fixed="true"></norti-header>
+
+    <!-- Seção Título e Descrição com Grid Moderno -->
+    <section class="section norti-projectIntro">
+        <div class="norti-projectHeader">
+            <div class="norti-introLeft">
+                <h2 id="norti-projectTitle"></h2>
+                <p class="norti-subtitle" id="norti-projectSubtitle"></p>
+                <hr>
+                <div class="norti-projectMeta">
+                    <div>
+                        <span class="norti-metaValue" id="norti-projectYear"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="norti-introRight">
+                <p id="norti-projectDescription"></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Imagens do Projeto -->
+    <section class="section project-images" id="project-images"></section>
+
+    <!-- FOOTER COMPONENTIZADO -->
+    <norti-footer year="2025" instagram="https://instagram.com/nortidesign"
+        linkedin="https://www.linkedin.com/company/nortidesign">
+    </norti-footer>
+
+    <!-- SCRIPTS COMPONENTES -->
+    <script type="module" src="../icons/nortiIcons.js"></script>
+    <script type="module" src="../components/norti-header/norti-header.js"></script>
+    <script type="module" src="../components/norti-footer/norti-footer.js"></script>
+
+    <!-- SCRIPT DINÂMICO DO PROJETO -->
+    <script type="module" src="./project.js"></script>
+
+</body>
+
+</html>

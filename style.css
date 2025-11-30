@@ -191,3 +191,77 @@ html[data-theme='light'] .norti-hero .norti-light-green {
 html[data-theme='dark'] .norti-hero {
     backdrop-filter: brightness(1.1) contrast(1.05);
 }
+
+
+
+
+/* ------------------------- */
+
+.norti-form-container {
+  max-width: 500px;
+  margin: 50px auto;
+  background: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+  font-family: 'Arial', sans-serif;
+}
+
+.norti-form .form-step {
+  display: none;
+  flex-direction: column;
+  gap: 15px;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.norti-form .form-step.active {
+  display: flex;
+}
+
+.norti-form label {
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.norti-form input,
+.norti-form select,
+.norti-form textarea {
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  width: 100%;
+}
+
+.norti-form button {
+  padding: 10px 20px;
+  font-size: 14px;
+  cursor: pointer;
+  border: none;
+  border-radius: 6px;
+  background-color: #4f46e5;
+  color: #fff;
+  transition: background 0.3s;
+}
+
+.norti-form button:hover {
+  background-color: #3730a3;
+}
+
+.norti-form button.prev-btn {
+  background-color: #ccc;
+  color: #000;
+}
+
+.norti-form button.prev-btn:hover {
+  background-color: #999;
+}
+
+@keyframes fadeIn {
+  from {opacity:0; transform: translateY(10px);}
+  to {opacity:1; transform: translateY(0);}
+}
+
+.success-step {
+  text-align: center;
+}

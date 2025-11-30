@@ -1,0 +1,113 @@
+.norti-projectHeader {
+    display: flex;
+    flex-direction: row;
+    box-sizing: border-box;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+    max-width: 1400px;
+    padding-top: 14vh;
+    gap: 15%;
+    overflow: hidden;
+}
+
+
+.norti-introLeft {
+    flex: 1;
+    min-width: 400px;
+}
+
+.norti-introRight {
+    flex: 2;
+    min-width: 400px;
+}
+
+
+.norti-projectHeader h2 {
+    font-size: 72px;
+    font-weight: 600;
+    line-height: 1.2;
+    color: var(--color-text-primary);
+}
+
+
+#norti-projectDescription p {
+    font-size: 21px;
+    font-weight: 400;
+    line-height: 1.4;
+    color: var(--color-text-primary);
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+
+.norti-subtitle {
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 1.2;
+    color: var(--color-text-tertiary);
+}
+
+.norti-projectHeader hr {
+    width: 10%;
+    background-color: var(--color-background-detail);
+    border: none;
+    height: 2px;
+    margin: 20px 0;
+}
+
+
+.norti-metaLabel,
+.norti-metaValue {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.2;
+    color: var(--color-text-primary);
+}
+
+.norti-projectMeta {
+    display: flex;
+    gap: 40px;
+    margin-top: 20px;
+}
+
+.norti-projectMeta .norti-metaLabel {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.project-images {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.project-images img {
+    width: 100%;
+    max-width: 1400px;
+    border-radius: 30px;
+    height: auto;
+    display: block;
+}
+
+.project-text p {
+    font-size: 1.1rem;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* Responsividade */
+@media(max-width: 768px) {
+
+    .norti-introLeft,
+    .norti-introRight {
+        flex: 1 1 100%;
+    }
+
+    .norti-projectMeta {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
