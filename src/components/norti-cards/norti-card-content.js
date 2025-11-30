@@ -21,9 +21,9 @@ export const nortiCardsData = [
         link: "projects/projects.html?project=pad-thai"
     },
     {
-        title: "Consultoria",
-        date: "Estratégia Visual",
-        image: "img/cards/consultoria.jpg",
+        title: "Danear",
+        date: "Nov/2022",
+        image: "img/projectsCard/norti-danear.jpg",
         description: "Auxílio estratégico para o crescimento visual da sua marca.",
         link: "projects/projects.html?project=consultoria"
     }
