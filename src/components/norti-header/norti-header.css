@@ -1,23 +1,26 @@
 .nortiHeader {
   padding: 16px 0;
-  background: rgba(255, 255, 255, 0.15); /* transparência leve */
+  background: var(--color-background-glass);
   backdrop-filter: blur(10px) saturate(180%);
   -webkit-backdrop-filter: blur(10px) saturate(180%);
   border: var(--color-outline-secondary);
-  border-radius: 20px; /* bordas arredondadas */
-  margin: 10px auto; /* centraliza horizontalmente */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.10);
+  border-radius: 20px;
+  margin: 10px auto;
   transition: background 0.25s ease, border 0.25s ease;
   position: relative;
   z-index: 999;
+  width: 80%;
+  max-width: 1200px;
 }
 
-/* fixo no topo com efeito glass */
 .nortiHeader.fixed {
   position: fixed;
-  top: 10px; /* mantém uma margem do topo */
+  top: 10px;
   left: 50%;
   transform: translateX(-50%);
-  width: 70%; /* mesma largura menor */
+  width: 80%;
+  max-width: 1200px;
   z-index: 9999;
 }
 
@@ -29,6 +32,10 @@
   margin: 0 auto;
 }
 
+.logo {
+  display: flex;
+  height: 30px;
+}
 
 .logo img {
   display: flex;
@@ -36,29 +43,36 @@
   cursor: pointer;
 }
 
+#logo-symbol {
+  display: none;
+}
+
 .contentGroup {
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap: 60px;
+  gap: 20px;
 }
 
-
-.site-nav ul {
-  display: flex;
-  align-items: center;
-  gap: 28px;
-}
-
-.site-nav a {
-  color: var(--color-text-primary);
+.btn-highlight {
+  display: inline-block;
+  padding: 6px 20px;
+  background: var(--color-background-primary-reverse);
+  color: var(--color-text-button-theme-hover);
+  font-weight: 700;
+  border-radius: 12px;
   text-decoration: none;
-  font-weight: 600;
-  font-size: 15px;
+  transition: transform 0.2s ease, opacity 0.2s ease;
 }
 
-.theme-btn,
-.mobile-menu-btn {
+.btn-highlight:hover {
+  background: var(--color-norti-pink);
+  color: var(--color-text-button-white);
+  transform: translateY(-1px);
+}
+
+
+.theme-btn {
   display: flex;
   background: var(--color-background-button-theme);
   color: var(--color-text-button-theme);
@@ -68,41 +82,35 @@
   cursor: pointer;
 }
 
-.theme-btn:hover,
-.mobile-menu-btn:hover {
+.theme-btn:hover {
   background: var(--color-background-button-theme-hover);
   color: var(--color-text-button-theme-hover);
 }
 
-.mobile-menu-btn {
-  display: none;
-}
 
 /* MOBILE */
 @media (max-width: 850px) {
-  .site-nav {
-    position: absolute;
-    top: 100%;
-    right: 0;
-    width: 100%;
-    padding: 20px 0;
-    background: var(--color-background-primary);
-    border-bottom: 1px solid var(--color-gray-200);
 
+  .nortiHeader,
+  .nortiHeader.fixed {
+    width: 95%;
+  }
+
+  .nortiHeaderContainer {
+    padding: 0px 20px;
+  }
+
+  #logo-full {
     display: none;
-    flex-direction: column;
   }
 
-  .site-nav.open {
-    display: flex;
-  }
-
-  .site-nav ul {
-    flex-direction: column;
-    gap: 20px;
-  }
-
-  .mobile-menu-btn {
+  #logo-symbol {
     display: block;
+    height: 26px;
+  }
+
+  .site-nav,
+  .mobile-menu-btn {
+    display: none !important;
   }
 }
