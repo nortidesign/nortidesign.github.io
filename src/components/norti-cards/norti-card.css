@@ -73,3 +73,169 @@
   transform: translateY(0);
   opacity: 1;
 }
+
+
+
+/* ===================== */
+/*  DESKTOP (original)   */
+/* ===================== */
+
+.norti-cards-container {
+  display: flex;
+  flex-direction: row;
+  box-sizing: border-box;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  gap: 22px;
+  height: auto;
+}
+
+.norti-card {
+  position: relative;
+  display: block;
+  width: 100%;         /* preenche o container */
+  max-width: 708px;    /* mantém o tamanho máximo */
+  height: 780px;       /* define altura fixa */
+  border-radius: 28px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform .4s ease;
+  box-shadow: 0 10px 25px rgba(0,0,0,.08);
+}
+
+.norti-card-img {
+  position: absolute;  
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform .6s ease;
+}
+
+.norti-card:hover .norti-card-img {
+  transform: scale(1.02);
+}
+
+.norti-card-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0,0,0,0) 10%,
+    rgba(0,0,0,0.85)
+  );
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 25px;
+  color: white;
+
+  opacity: 0;
+  transition: opacity .4s ease;
+}
+
+.norti-card:hover .norti-card-overlay {
+  opacity: 1;
+}
+
+.norti-card-title,
+.norti-card-subtitle {
+  transform: translateY(10px);
+  opacity: 0;
+  transition: transform .4s ease, opacity .4s ease;
+}
+
+.norti-card:hover .norti-card-title,
+.norti-card:hover .norti-card-subtitle {
+  color: var(--color-norti-white);
+  transform: translateY(0);
+  opacity: 1;
+}
+
+
+
+/* ===================== */
+/*  TABLET (1024px)      */
+/* ===================== */
+@media (max-width: 1024px) {
+
+  .norti-cards-container {
+    justify-content: center;
+    gap: 20px;
+    padding: 0 20px;
+  }
+
+  .norti-card {
+    max-width: 48%;
+    height: 600px;
+  }
+
+  .norti-card-title {
+    font-size: 28px;
+  }
+
+  .norti-card-subtitle {
+    font-size: 18px;
+  }
+}
+
+
+
+/* ===================== */
+/*  TABLET PEQUENO (768px) */
+/* ===================== */
+@media (max-width: 768px) {
+
+  .norti-cards-container {
+    justify-content: center;
+    gap: 18px;
+  }
+
+  .norti-card {
+    max-width: 100%;
+    height: 560px;
+  }
+
+  .norti-card-title {
+    font-size: 26px;
+  }
+
+  .norti-card-subtitle {
+    font-size: 16px;
+  }
+}
+
+
+
+/* ===================== */
+/*  MOBILE (480px)       */
+/* ===================== */
+@media (max-width: 480px) {
+
+  .norti-cards-container {
+    padding: 0 16px;
+    gap: 16px;
+  }
+
+  .norti-card {
+    max-width: 100%;
+    height: 420px;
+    border-radius: 18px;
+  }
+
+  .norti-card-overlay {
+    padding: 18px;
+  }
+
+  .norti-card-title {
+    font-size: 22px;
+  }
+
+  .norti-card-subtitle {
+    font-size: 15px;
+  }
+}
