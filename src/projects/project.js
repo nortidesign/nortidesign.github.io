@@ -72,6 +72,8 @@ if (!project) {
   $('#norti-projectYear').textContent = project.year;
   $('#norti-projectDescription').innerHTML = project.description;
 
+  document.title = project.title + " - Norti Design";
+
   (async () => {
     for (const src of project.images) {
       await addImage($('#project-images'), src, project.title);
