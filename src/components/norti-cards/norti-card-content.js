@@ -25,6 +25,6 @@ export const nortiCardsData = [
         date: "Nov/2022",
         image: "img/projectsCard/norti-danear.jpg",
         description: "Auxílio estratégico para o crescimento visual da sua marca.",
-        link: "src/projects/project.html?project=consultoria"
+        link: "src/projects/project.html?project=danear"
     }
 ];

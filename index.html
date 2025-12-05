@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="pt-BR" data-theme="light">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,12 +8,10 @@
     <link rel="icon" type="image/x-icon" href="img/favicon.ico">
 
     <link rel="stylesheet" href="src/icons/nortiIcons.css">
-
     <link rel="stylesheet" href="src/components/norti-cards/norti-card.css">
     <link rel="stylesheet" href="src/components/norti-form/norti-form.css">
     <link rel="stylesheet" href="src/components/norti-header/norti-header.css">
     <link rel="stylesheet" href="src/components/norti-footer/norti-footer.css">
-
 
     <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="style.css">
@@ -28,18 +25,28 @@
     <!-- NOVO HEADER COMPONENTIZADO -->
     <norti-header logo="Norti Design" fixed="true"></norti-header>
 
-
     <!-- MAIN -->
     <main>
         <section class="norti-hero">
             <div class="norti-noise"></div>
             <div class="norti-light-green"></div>
+            <div class="norti-hero-grid"></div>
+
             <section>
                 <div class="norti-heroContent">
-                    <h1>Design estratégico para <br> marcas ambiciosas.</br></h1>
-                    <p>Construímos identidades e interfaces para empresas que buscam destaque.</p>
+
+                    <!-- TEXTOS TRADUZÍVEIS -->
+                    <h1 data-i18n="hero.title">
+                        Design estratégico para <br>marcas ambiciosas.
+                    </h1>
+
+                    <p data-i18n="hero.sub">
+                        Construímos identidades e interfaces para empresas que buscam destaque.
+                    </p>
+
                 </div>
             </section>
+
             <div class="norti-hero-fade"></div>
         </section>
 
@@ -49,18 +56,22 @@
 
     </main>
 
-
-    <norti-footer year="2025" instagram="https://instagram.com/nortidesign"
+    <!-- FOOTER -->
+    <norti-footer
+        year="2025"
+        instagram="https://instagram.com/nortidesign"
         linkedin="https://www.linkedin.com/company/nortidesign">
     </norti-footer>
 
+    <!-- SCRIPTS -->
     <script type="module" src="src/icons/nortiIcons.js"></script>
     <script type="module" src="src/components/norti-header/norti-header.js"></script>
     <script type="module" src="src/components/norti-cards/norti-card.js"></script>
     <script src="src/components/norti-form/norti-form.js"></script>
     <script type="module" src="src/components/norti-footer/norti-footer.js"></script>
 
-    <script src="src/smooth-scroll.js"></script>
-</body>
+    <!-- LANGUAGE -->
+    <script type="module" src="src/languages/i18n.js"></script>
 
+</body>
 </html>

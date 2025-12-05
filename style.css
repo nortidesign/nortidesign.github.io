@@ -90,7 +90,7 @@
 }
 
 
-
+/* ANIMAÇÕES --------------------------------------------------- */
 
 @keyframes moveBlue {
     0% {
@@ -143,6 +143,9 @@
     }
 }
 
+
+/* TEMAS ------------------------------------------------------- */
+
 html[data-theme='dark'] .norti-hero::before,
 html[data-theme='dark'] .norti-hero::after,
 html[data-theme='dark'] .norti-hero .norti-light-green {
@@ -162,10 +165,33 @@ html[data-theme='dark'] .norti-hero {
 }
 
 
+/* GRID — IDENTIDADE VISUAL ----------------------------------- */
 
-/* ----------------------------- */
-/*  TABLET 1024px                */
-/* ----------------------------- */
+.norti-hero-grid {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100vw;
+    height: 100%;
+    pointer-events: none;
+    z-index: 3;
+
+    opacity: .25;
+    mix-blend-mode: overlay;
+
+    background-image:
+        linear-gradient(var(--color-background-primary-reverse) 1px, transparent 1px),
+        linear-gradient(90deg, var(--color-background-primary-reverse) 1px, transparent 1px);
+    background-size: 100px 100px;
+
+
+}
+
+
+/* RESPONSIVO -------------------------------------------------- */
+
+
+/* TABLET 1360px */
 @media (max-width: 1360px) {
 
     .norti-hero {
@@ -185,7 +211,6 @@ html[data-theme='dark'] .norti-hero {
         font-size: 22px;
     }
 
-    /* Ajuste das luzes */
     .norti-hero::before,
     .norti-hero::after,
     .norti-hero .norti-light-green {
@@ -194,13 +219,17 @@ html[data-theme='dark'] .norti-hero {
         top: -20%;
         left: -50%;
     }
+
+
+    .norti-hero-grid {
+        background-size: 50px 50px;
+        opacity: 0.15;
+        right: 0;
+    }
 }
 
 
-
-/* ----------------------------- */
-/*  TABLET 768px                 */
-/* ----------------------------- */
+/* TABLET 768px */
 @media (max-width: 768px) {
 
     .norti-hero {
@@ -225,13 +254,17 @@ html[data-theme='dark'] .norti-hero {
         background-size: 40px;
         opacity: 0.45;
     }
+
+
+    .norti-hero-grid {
+        background-size: 50px 50px;
+        opacity: 0.15;
+        right: 0;
+    }
 }
 
 
-
-/* ----------------------------- */
-/*  MOBILE 480px                 */
-/* ----------------------------- */
+/* MOBILE 480px */
 @media (max-width: 480px) {
 
     .norti-hero {
@@ -268,77 +301,94 @@ html[data-theme='dark'] .norti-hero {
     .norti-hero-fade {
         height: 200px;
     }
+
+
+    .norti-hero-grid {
+        width: 100vw;
+        left: 50%;
+        transform: translateX(-50%);
+        right: auto;
+
+        background-size: 36px 36px;
+        opacity: 0.15;
+    }
 }
 
 
-
-/* ------------------------- */
+/* FORM -------------------------------------------------------- */
 
 .norti-form-container {
-  max-width: 500px;
-  margin: 50px auto;
-  background: #fff;
-  padding: 30px;
-  border-radius: 12px;
-  box-shadow: 0 8px 24px rgba(0,0,0,0.1);
-  font-family: 'Arial', sans-serif;
+    max-width: 500px;
+    margin: 50px auto;
+    background: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    font-family: 'Arial', sans-serif;
 }
 
 .norti-form .form-step {
-  display: none;
-  flex-direction: column;
-  gap: 15px;
-  animation: fadeIn 0.5s ease-in-out;
+    display: none;
+    flex-direction: column;
+    gap: 15px;
+    animation: fadeIn 0.5s ease-in-out;
 }
 
 .norti-form .form-step.active {
-  display: flex;
+    display: flex;
 }
 
 .norti-form label {
-  font-weight: bold;
-  font-size: 16px;
+    font-weight: bold;
+    font-size: 16px;
 }
 
 .norti-form input,
 .norti-form select,
 .norti-form textarea {
-  padding: 10px;
-  font-size: 14px;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-  width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    width: 100%;
 }
 
 .norti-form button {
-  padding: 10px 20px;
-  font-size: 14px;
-  cursor: pointer;
-  border: none;
-  border-radius: 6px;
-  background-color: #4f46e5;
-  color: #fff;
-  transition: background 0.3s;
+    padding: 10px 20px;
+    font-size: 14px;
+    cursor: pointer;
+    border: none;
+    border-radius: 6px;
+    background-color: #4f46e5;
+    color: #fff;
+    transition: background 0.3s;
 }
 
 .norti-form button:hover {
-  background-color: #3730a3;
+    background-color: #3730a3;
 }
 
 .norti-form button.prev-btn {
-  background-color: #ccc;
-  color: #000;
+    background-color: #ccc;
+    color: #000;
 }
 
 .norti-form button.prev-btn:hover {
-  background-color: #999;
+    background-color: #999;
 }
 
 @keyframes fadeIn {
-  from {opacity:0; transform: translateY(10px);}
-  to {opacity:1; transform: translateY(0);}
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .success-step {
-  text-align: center;
+    text-align: center;
 }
