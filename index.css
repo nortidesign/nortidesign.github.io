@@ -68,7 +68,7 @@
   --color-background-secondary: #0f0f0f;
   --color-background-tertiary: #1e1e1e;
   --color-background-4th: #2d2d2d;
-  --color-background-5th: #3c3c3c;
+  --color-background-5th: #111114;
   --color-background-hover: #265FFF4D;
   --color-background-active: #172258;
   --color-background-detail: #A9AFD4;
@@ -101,7 +101,7 @@
   --color-outline-primary: 1px solid #fafafa;
   --color-outline-secondary: 1px solid #76767a;
   --color-outline-secondary-variable: #76767a;
-  --color-outline-tertiary: 1px solid #595f8a;
+  --color-outline-tertiary: 1px solid #2d2e31;
   --color-outline-tertiary-variable: #595f8a;
 
 
@@ -170,6 +170,27 @@ a {
 a:hover {
   color: var(--color-text-highlight);
 }
+
+button {
+  display: inline-block;
+  padding: 12px 20px;
+  background: var(--color-background-primary-reverse);
+  color: var(--color-text-button-theme-hover);
+  border: none;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 12px;
+  text-decoration: none;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+button:hover {
+  background: var(--color-norti-pink);
+  color: var(--color-text-button-white);
+  transform: translateY(-1px);
+  cursor: pointer;
+}
+
 
 /* Containers e seções */
 section {
