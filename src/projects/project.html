@@ -11,6 +11,7 @@
     <!-- Estilos dos componentes Norti -->
     <link rel="stylesheet" href="../icons/nortiIcons.css">
     <link rel="stylesheet" href="../components/norti-header/norti-header.css">
+    <link rel="stylesheet" href="../components/norti-banner/norti-banner.css">
     <link rel="stylesheet" href="../components/norti-footer/norti-footer.css">
 
     <link rel="stylesheet" href="/index.css">
@@ -27,36 +28,39 @@
     <!-- HEADER COMPONENTIZADO -->
     <norti-header logo="Norti Design" fixed="true"></norti-header>
 
-    <!-- Seção Título e Descrição com Grid Moderno -->
-    <section class="section norti-projectIntro">
-        <div class="norti-projectHeader">
-            <div class="norti-introLeft">
-                <h2 id="norti-projectTitle"></h2>
-                <p class="norti-subtitle" id="norti-projectSubtitle"></p>
-                <hr>
-                <div class="norti-projectMeta">
-                    <div>
-                        <span class="norti-metaValue" id="norti-projectYear"></span>
+    <main>
+
+        <section class="section norti-projectIntro">
+            <div class="norti-projectHeader">
+                <div class="norti-introLeft">
+                    <h2 id="norti-projectTitle"></h2>
+                    <p class="norti-subtitle" id="norti-projectSubtitle"></p>
+                    <hr>
+                    <div class="norti-projectMeta">
+                        <div>
+                            <span class="norti-metaValue" id="norti-projectYear"></span>
+                        </div>
                     </div>
                 </div>
+                <div class="norti-introRight">
+                    <p id="norti-projectDescription"></p>
+                </div>
             </div>
-            <div class="norti-introRight">
-                <p id="norti-projectDescription"></p>
-            </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Seção Imagens do Projeto -->
-    <section class="section project-images" id="project-images"></section>
+        <section class="section project-images" id="project-images"></section>
 
-    <!-- FOOTER COMPONENTIZADO -->
-    <norti-footer year="2025" instagram="https://instagram.com/nortidesign"
-        linkedin="https://www.linkedin.com/company/nortidesign">
-    </norti-footer>
+        <norti-banner></norti-banner>
+    </main>
+
+    <!-- FOOTER -->
+    <norti-footer instagram="https://instagram.com/nortidesign"
+        linkedin="https://www.linkedin.com/company/nortidesign"></norti-footer>
 
     <!-- SCRIPTS COMPONENTES -->
     <script type="module" src="../icons/nortiIcons.js"></script>
     <script type="module" src="../components/norti-header/norti-header.js"></script>
+    <script type="module" src="../components/norti-banner/norti-banner.js"></script>
     <script type="module" src="../components/norti-footer/norti-footer.js"></script>
 
     <!-- SCRIPT DINÂMICO DO PROJETO -->
