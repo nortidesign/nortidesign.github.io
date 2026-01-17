@@ -1,0 +1,115 @@
+.nortiHeader {
+  padding: 16px 0;
+  background: var(--color-background-glass);
+  backdrop-filter: blur(10px) saturate(180%);
+  -webkit-backdrop-filter: blur(10px) saturate(180%);
+  border: var(--color-outline-secondary);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.10);
+  border-radius: 26px;
+  margin: 10px auto;
+  transition: background 0.25s ease, border 0.25s ease;
+  position: relative;
+  z-index: 999;
+  max-width: 1440px;
+}
+
+.nortiHeader.fixed {
+  position: fixed;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 95%;
+  max-width: 1440px;
+  z-index: 9999;
+}
+
+.nortiHeaderContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0px 18px 0px 32px;
+  margin: 0 auto;
+}
+
+.logo {
+  display: flex;
+  height: 30px;
+}
+
+.logo img {
+  display: flex;
+  height: 26px;
+  cursor: pointer;
+}
+
+#logo-symbol {
+  display: none;
+}
+
+.contentGroup {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+}
+
+.btn-highlight {
+  display: inline-block;
+  padding: 6px 20px;
+  background: var(--color-background-primary-reverse);
+  color: var(--color-text-button-theme-hover);
+  font-weight: 700;
+  border-radius: 12px;
+  text-decoration: none;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.btn-highlight:hover {
+  background: var(--color-norti-pink);
+  color: var(--color-text-button-white);
+  transform: translateY(-1px);
+}
+
+
+.theme-btn {
+  display: flex;
+  background: var(--color-background-button-theme);
+  color: var(--color-text-button-theme);
+  padding: 8px;
+  border-radius: 12px;
+  border: 0;
+  cursor: pointer;
+}
+
+.theme-btn:hover {
+  background: var(--color-background-button-theme-hover);
+  color: var(--color-text-button-theme-hover);
+}
+
+
+/* MOBILE */
+@media (max-width: 850px) {
+
+  .nortiHeader,
+  .nortiHeader.fixed {
+    width: 95%;
+  }
+
+  .nortiHeaderContainer {
+    padding: 0px 20px;
+  }
+
+  #logo-full {
+    display: none;
+  }
+
+  #logo-symbol {
+    display: block;
+    height: 26px;
+  }
+
+  .site-nav,
+  .mobile-menu-btn {
+    display: none !important;
+  }
+}

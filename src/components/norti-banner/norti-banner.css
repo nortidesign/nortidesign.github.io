@@ -1,0 +1,239 @@
+.norti-cta-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 0 40px;
+    margin: 4rem auto;
+    max-width: 1520px;
+}
+
+
+.norti-cta-banner {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background: var(--color-background-glass);
+    backdrop-filter: blur(10px) saturate(180%);
+    -webkit-backdrop-filter: blur(10px) saturate(180%);
+    border: var(--color-outline-tertiary);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.10);
+    padding: 30px 38px;
+    border-radius: 40px;
+    transition: 0.3s ease;
+    overflow: hidden;
+}
+
+.norti-cta-banner {
+    position: relative;
+    overflow: hidden;
+}
+
+.norti-cta-banner::after {
+    content: "";
+    position: absolute;
+    bottom: 1px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 96%;
+    height: 48px;
+    background: radial-gradient(circle at 50% 70%, var(--color-norti-green) 0%, var(--color-norti-blue) 40%, var(--color-norti-pink) 80%, var(--color-norti-green) 100%);
+    background-size: 300% 300%;
+    background-position: 0% 50%;
+    background-repeat: repeat;
+    filter: blur(66px) brightness(1.8);
+    border-radius: 60%;
+    pointer-events: none;
+    z-index: 0;
+    animation: norti-glow-move 18s ease-in-out infinite;
+}
+
+@keyframes norti-glow-move {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+
+
+.norti-cta-container {
+    position: relative;
+    z-index: 2;
+    display: grid;
+    grid-template-columns: 1fr 520px;
+    gap: 10%;
+    padding: 20px 10px 20px 20px;
+    width: 100%;
+    align-items: flex-start;
+}
+
+
+.norti-cta-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 12px;
+}
+
+.norti-cta-container h2 {
+    font-size: 52px;
+    font-weight: 600;
+    line-height: 1.1;
+    color: var(--color-text-primary);
+}
+
+.norti-cta-container p {
+    font-size: 21px;
+    font-weight: 400;
+    margin-right: 30px;
+    margin-bottom: 40px;
+    line-height: 1.2;
+    color: var(--color-text-secondary);
+}
+
+
+.norti-cta-button {
+    display: inline-block;
+    padding: 12px 26px;
+    width: fit-content;
+    background: var(--color-background-primary-reverse);
+    color: var(--color-text-button-theme-hover);
+    border: none;
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 16px;
+    text-decoration: none;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.norti-cta-button:hover {
+  background: var(--color-norti-pink);
+  color: var(--color-text-button-white);
+  transform: translateY(-1px);
+}
+
+
+.norti-cta-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.norti-cta-testimonial {
+    display: grid;
+    grid-template-columns: 80px 1fr;
+    grid-template-rows: auto auto;
+    gap: 12px 20px;
+
+    background-color: var(--color-background-primary);
+    border: var(--color-outline-tertiary);
+    padding: 24px;
+    border-radius: 20px;
+}
+
+
+.testimonial-photo {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+
+    border: 2px solid var(--color-outline-secondary-variable);
+}
+
+.testimonial-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.testimonial-name {
+    font-size: 28px;
+    margin: 0;
+    font-weight: 400;
+}
+
+.testimonial-company {
+    font-size: 18px;
+    color: var(--color-text-tertiary);
+}
+
+
+.testimonial-text {
+    grid-column: 1 / 3;
+    font-size: 15px;
+    line-height: 1.55;
+    margin-top: 10px;
+    color: var(--color-text-primary);
+}
+
+
+/* === RESPONSIVO === */
+
+@media (max-width: 880px) {
+    .norti-cta-wrapper {
+        padding: 0px 20px;
+    }
+
+    .norti-cta-container {
+        grid-template-columns: 1fr;
+        gap: 24px;
+        padding: 18px;
+    }
+
+    .norti-cta-banner {
+        margin: 0px;
+        padding: 6px;
+    }
+
+    .norti-cta-left {
+        margin-bottom: 30px;
+    }
+
+    .testimonial-name {
+        font-size: 23px;
+        line-height: 1.2;
+    }
+
+    .norti-cta-container p {
+        font-size: 18px;
+        font-weight: 400;
+        margin-right: 0px;
+        margin-bottom: 20px;
+        line-height: 1.3;
+        color: var(--color-text-secondary);
+    }
+}
+
+@media (max-width: 1024px) {
+  .norti-cta-wrapper {
+    padding: 0 24px;
+  }
+
+  .norti-cta-container {
+    grid-template-columns: 1fr;
+    gap: 32px;
+    padding: 20px;
+  }
+
+  .norti-cta-left {
+    margin: 0;
+  }
+
+  .norti-cta-container h2 {
+    font-size: 42px;
+  }
+
+  .norti-cta-container p {
+    font-size: 19px;
+    margin-right: 0;
+  }
+}

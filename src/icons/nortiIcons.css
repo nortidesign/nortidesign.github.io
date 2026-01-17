@@ -1,0 +1,14 @@
+.norti-icon {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+norti-icons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+norti-icons svg {
+  display: block;
+}
